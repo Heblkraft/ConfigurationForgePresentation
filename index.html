@@ -12,26 +12,37 @@
 	<link rel="stylesheet" href="./css/moon.css" id="theme">
 
 	<style>
-
+		.ccfLogo{
+			position: fixed;
+			bottom: 1em;
+			left: 1em;
+			opacity:0;
+		}
 	</style>
 
 </head>
 
+
+<!-- bay hat auch gesagt zb vorher schon ein bild von einem module herzeigen bei der konzept folie --> 
+
+
 <body>
+	<img id ="jsLogo" src="slide_logo.png" class="ccfLogo" width="80px" height="80px"></div>
 
 	<div class="reveal">
 
 		<div class="slides">
 			
-			<section>
+			<section id="main">
 				<h6><img src="././logo.svg" style="border:none;background:none;width:250px;height:250px;display:inline-block;vertical-align: middle;padding-left:10px; box-shadow:none;"> </h6>
 				<h2>Cisco Configuration Forge</h2>
 			</section>
 
-			<section>
+			<section id="team">
 
 				<section>
 					<h3>Team <img src="././team_logo.png" style="border:none;background:none;width:64px;height:64px;display:inline-block;vertical-align: middle;padding-left:10px; box-shadow:none;"> </h3>
+
 				</section>
 
 				<section>	
@@ -78,7 +89,7 @@
 
 			</section>
 
-			<section>
+			<section id="idea">
 				
 				<section>
 					<h3>Projektidee <img src="././idea_icon.png" style="border:none;background:none;width:64px;height:64px;display:inline-block;vertical-align: middle;padding-left:10px; box-shadow:none;transform: rotate(10deg);position:absolute;top:-20px;"> </h3>
@@ -112,60 +123,59 @@
 				
 		
 				
-				<section>
-					<section>
-					<h3>Konzept <img src="././konzept_icon.png" style="border:none;background:none;width:64px;height:64px;display:inline-block;vertical-align: middle;padding-left:10px; box-shadow:none;"> </h3>
-					</section>
+	<section id="konzept">
+		<section>
+		<h3>Konzept <img src="././konzept_icon.png" style="border:none;background:none;width:64px;height:64px;display:inline-block;vertical-align: middle;padding-left:10px; box-shadow:none;"> </h3>
+		</section>
 
 
-					<section>
-						<h3>Module</h3>
+		<section>
+			<h3>Module</h3>
 
-						<h6 class="fragment">Einzelne Teilfunktion eines Gerätes </h6>
-						<h6 class="fragment">Grundkonfiguration</h6>
-						<h6 class="fragment">VLAN</h6>
-						<h6 class="fragment">Interfaces</h6>
-
-
-
-					</section>
-
-					<section>
-						<h3>Benutzer</h3>
-						<br>
-						<h6 class="fragment"> Keine Anmeldung erforderlich</h6>
-						<h6 class="fragment"> Einfacher Download der Konfigurations Datei </h6>
-						<h6 class="fragment"> Breites Anwendersprektrum</h6>
-					</section>
+			<h6 class="fragment">Einzelne Teilfunktion eines Gerätes </h6>
+			<h6 class="fragment">Grundkonfiguration</h6>
+			<h6 class="fragment">VLAN</h6>
+			<h6 class="fragment">Interfaces</h6>
 
 
-					<section>
-						<h3>Arbeitsfläche</h3>
-						<br>
-						<h6 class="fragment"> Visuelle Repräsentation von Netzwerkgeräten</h6>
-						<h6 class="fragment"> Übersichtlichere Konfiguration </h6>
-						<h6 class="fragment"> Playground Feeling</h6>
-					</section>
+		</section>
+
+		<section>
+			<h3>Benutzer</h3>
+			<br>
+			<h6 class="fragment"> Keine Anmeldung erforderlich</h6>
+			<h6 class="fragment"> Einfacher Download der Konfigurations Datei </h6>
+			<h6 class="fragment"> Breites Anwendersprektrum</h6>
+		</section>
 
 
-					<section>
-						<h6> Funktioniert sowohl am Desktop... </h6>
+		<section>
+			<h3>Arbeitsfläche</h3>
+			<br>
+			<h6 class="fragment"> Visuelle Repräsentation von Netzwerkgeräten</h6>
+			<h6 class="fragment"> Übersichtlichere Konfiguration </h6>
+			<h6 class="fragment"> Playground Feeling</h6>
+		</section>
 
-						<h6><img src="././desktop.png" style="border:none;background:none;display:inline-block;
-							vertical-align: middle;padding-left:10px; box-shadow:none;"> </h6>	
-						</section>
 
-						<section>
-							<h6> Als auch am Tablet...</h6>
-							<!-- 804x549 --> 
-							<h6><img src="././tablet.png" style="border:none;width:704px; height:449px;background:none;display:inline-block;
-								vertical-align: middle;padding-left:10px; box-shadow:none;"> </h6>			
-							</section>
+		<section>
+			<h6> Funktioniert sowohl am Desktop... </h6>
 
-						</section>
-
+			<h6><img src="././desktop.png" style="border:none;background:none;display:inline-block;
+				vertical-align: middle;padding-left:10px; box-shadow:none;"> </h6>	
+			</section>
 
 			<section>
+				<h6> Als auch am Tablet...</h6>
+				<!-- 804x549 --> 
+				<h6><img src="././tablet.png" style="border:none;width:704px; height:449px;background:none;display:inline-block;
+					vertical-align: middle;padding-left:10px; box-shadow:none;"> </h6>			
+			</section>
+
+		</section>
+			
+	
+			<section id="tools">
 				<section> 
 					<h3>Tools <img src="././tools_icon.png" style="border:none;background:none;width:64px;height:64px;display:inline-block;vertical-align: middle;padding-left:10px; box-shadow:none;"> </h3>
 				</section>
@@ -318,6 +328,17 @@
 					{ src: '././math.js', async: true }
 					]
 				});
+
+					Reveal.addEventListener( 'slidechanged', function( event ) {
+						if(!event.currentSlide.id || event.currentSlide.id !== "main"){
+							document.getElementById('jsLogo').style.opacity = "1";
+						}
+						else if(event.currentSlide.id === "main"){
+							document.getElementById('jsLogo').style.opacity = "0";
+						}
+					} );
+
+					
 
 			</script>
 
