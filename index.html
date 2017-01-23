@@ -36,6 +36,17 @@
 			<section id="main">
 				<h6><img src="././logo.svg" style="border:none;background:none;width:250px;height:250px;display:inline-block;vertical-align: middle;padding-left:10px; box-shadow:none;"> </h6>
 				<h2>Cisco Configuration Forge</h2>
+		
+			</section>
+		
+			<section id="">
+				<h3>Was ist CCF? </h3>
+				
+				<br>
+
+				<h6 class="fragment"> Webinterface für die Konfiguration von Netzwerkgeräten</h6>
+				<h6 class="fragment"> Drag & Drop Funktion zur leichteren Konfiguration</h6>
+
 			</section>
 
 			<section id="team">
@@ -109,16 +120,6 @@
 					<h6 class="fragment">Einfache Bedienung</h6>
 					<h6 class="fragment">Flexibilität</h6>
 				</section>
-				<section>
-					<h3>Unsere Idee:</h3>
-					
-					<br>
-
-					<h6 class="fragment"> Webinterface für die Konfiguration von Netzwerkgeräten</h6>
-					<h6 class="fragment"> Drag & Drop Funktion zur leichteren Konfiguration</h6>
-
-				</section>
-
 			</section>
 				
 		
@@ -247,7 +248,7 @@
 				<section>
 
 					<section>
-						<h3>Herausforderungen</h3>
+						<h3>Herausforderungen <img src="././weight_icon.png" style="border:none;background:none;width:64px;height:64px;display:inline-block;vertical-align: middle;padding-left:10px;padding-bottom:18px; box-shadow:none;"> </h3>
 					</section>
 
 					<section> 
@@ -311,23 +312,21 @@
 				<script>
 
 					Reveal.initialize({
-						controls: true,
+						controls: false,
 						history: true,
 						transition: 'linear',
-			// Display the page number of the current slide
-			slideNumber: true,
+						slideNumber: true,
 
 
-			math: {
-						// mathjax: 'http://cdn.mathjax.org/mathjax/latest/MathJax.js',
-						config: 'TeX-AMS_HTML-full'
-					},
+						smath: {
+							config: 'TeX-AMS_HTML-full'
+						},
 
-					dependencies: [
-					{ src: '././lib/js/classList.js' },
-					{ src: '././math.js', async: true }
-					]
-				});
+						dependencies: [
+							{ src: '././lib/js/classList.js' },
+							{ src: '././math.js', async: true }
+						]
+					});
 
 					Reveal.addEventListener( 'slidechanged', function( event ) {
 						if(!event.currentSlide.id || event.currentSlide.id !== "main"){
@@ -338,7 +337,6 @@
 						}
 					} );
 
-					
 
 			</script>
 
